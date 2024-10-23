@@ -1,32 +1,22 @@
-import "./App.css";
-import { useState } from "react";
-import { BasicTable } from "./Tabelle";
-import { Titelleiste } from "./Titelleiste";
-import data from "./data/tableData.json";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 function App() {
-  const [auswahlService2, setAuswahlService2] = useState("");
-  const [auswahlAnbieter2, setAuswahlAnbieter2] = useState("");
-  const [suchtext2, setSuchtext2] = useState("");
-  return (
-    <div className="App">
-      <div className="titelseite-container">
-        <Titelleiste
-          onChangeService2={setAuswahlService2}
-          onChangeAnbieter2={setAuswahlAnbieter2}
-          onChangeSuchfenster2={setSuchtext2}
-        />
-        <br />
-
-        <BasicTable
-          auswahlService2={auswahlService2}
-          auswahlAnbieter2={auswahlAnbieter2}
-          suchtext2={suchtext2}
-          data={data}
-        />
-      </div>
-    </div>
-  );
+  <>
+    <Button>Click me</Button>
+    <TextField
+      id="filled-search"
+      label="Suchfeld Zusammenfassung"
+      type="search"
+      variant="filled"
+      sx={{
+        m: 0,
+        mt: -1,
+        width: 300,
+        height: 50,
+      }}
+    />
+  </>;
 }
 
 export default App;
